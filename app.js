@@ -107,10 +107,12 @@ let guess = (guess) => {
 
     if(guess === num)
     {
-        return `Your guess of ${guess} is the same as the computers random integer`;
+        // return `Your guess of ${guess} is the same as the computers random integer`;
+        return 'Good Work!';
     }
     else{
-        return `Your guess of ${guess} did not match the computers random integer of ${num}`;
+        // return `Your guess of ${guess} did not match the computers random integer of ${num}`;
+        return 'Not Matched';
     };
 }
 // console.log(capitalizeFirst('testing to see if works'));
