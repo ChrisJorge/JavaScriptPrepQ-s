@@ -171,6 +171,19 @@ let sumOfTwo = (num1, num2) => {
     return (num1 + num2);
 }
 
+let rightDirection = (str, amount) => {
+    this.str = str;
+    this.amount = amount;
+
+    amount = amount % str.length;
+    if(amount < 0){
+        amount = str.length + amount
+    }
+
+    return (str.slice(-amount) + str.slice(0, -amount))
+}
+
+
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -180,5 +193,6 @@ let sumOfTwo = (num1, num2) => {
 // console.log(guess(5))
 // console.log(numVowels('Apples'))
 // console.log(return50(10,50))
-console.log(sumOfTwo(2,2))
-console.log(sumOfTwo(2,6))
+// console.log(sumOfTwo(2,2))
+// console.log(sumOfTwo(2,6))
+console.log(rightDirection('w3resource', 3))
