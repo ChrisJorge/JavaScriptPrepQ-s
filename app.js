@@ -160,6 +160,17 @@ let return50 = (num1 = 0, num2 = 0) => {
     }
     return false;
 }
+let sumOfTwo = (num1, num2) => {
+    this.num1 = num1;
+    this.num2 = num2;
+
+    if(num1 === num2)
+    {
+        return ((num1 + num2) * 3);
+    }
+    return (num1 + num2);
+}
+
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -168,4 +179,6 @@ let return50 = (num1 = 0, num2 = 0) => {
 // console.log(positive_negative(1,4))
 // console.log(guess(5))
 // console.log(numVowels('Apples'))
-console.log(return50(10,50))
+// console.log(return50(10,50))
+console.log(sumOfTwo(2,2))
+console.log(sumOfTwo(2,6))
