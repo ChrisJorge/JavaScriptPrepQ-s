@@ -160,6 +160,7 @@ let return50 = (num1 = 0, num2 = 0) => {
     }
     return false;
 }
+
 let sumOfTwo = (num1, num2) => {
     this.num1 = num1;
     this.num2 = num2;
@@ -209,6 +210,105 @@ let removeChar = (str, char) => {
     return returnstr;
 }
 
+let replaceCharacters = (str) => {
+    this.str = str;
+    str = str.toLowerCase();
+    let arr = [];
+    let returnstr = "";
+
+    for(i = 0; i < str.length; i++)
+    {
+        switch (str[i])
+        {
+            case 'a':
+                arr.push('b');
+                break;
+            case 'b':
+                arr.push('c');
+                break;
+            case 'c':
+                arr.push('d');
+                break;
+            case 'd':
+                arr.push('e')
+                break;
+            case 'e':
+                arr.push('f')
+                break;
+            case 'f':
+                arr.push('g')
+                break;
+            case 'g':
+                arr.push('h')
+                break;
+            case 'h':
+                arr.push('i')
+                break;
+            case 'i':
+                arr.push('j')
+                break;
+            case 'j':
+                arr.push('k')
+                break;
+            case 'k':
+                arr.push('l')
+                break;
+            case 'l':
+                arr.push('m')
+                break;
+            case 'm':
+                arr.push('n')
+                break;
+            case 'n':
+                arr.push('o')
+                break;
+            case 'o':
+                arr.push('p')
+                break;
+            case 'p':
+                arr.push('q')
+                break;
+            case 'q':
+                arr.push('r')
+                break;
+            case 'r':
+                arr.push('s')
+                break;
+            case 's':
+                arr.push('t')
+                break;
+            case 't':
+                arr.push('u')
+                break;
+            case 'u':
+                arr.push('v')
+                break;
+            case 'v':
+                arr.push('w')
+                break;
+            case 'w':
+                arr.push('x')
+                break;
+            case 'x':
+                arr.push('y')
+                break;
+            case 'y':
+                arr.push('z')
+                break;
+            case 'z':
+                arr.push('a')
+                break;
+            default:
+                arr.push(str[i])
+                break;
+        }
+    }
+    for(i = 0; i < arr.length; i++)
+    {
+        returnstr += arr[i]
+    }
+    return returnstr
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -222,3 +322,5 @@ let removeChar = (str, char) => {
 // console.log(sumOfTwo(2,6))
 // console.log(rightDirection('w3resource', 3))
 // console.log(removeChar('Hello World', 0))
+// console.log(replaceCharacters('ab'))
+// console.log(replaceCharacters('All Letters will be replaced'))
