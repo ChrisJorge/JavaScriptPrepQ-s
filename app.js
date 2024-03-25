@@ -39,9 +39,22 @@ let reverseString = (string) => {
 }
 
 let sortAlphabetically = (string) => {
-    this.string = string
-    return string.split("").sort().join("")
+    this.string = string;
+    return string.split("").sort().join("");
+}
+
+let extractFirstHalf = (string) => {
+    this.string = string;
+    if(this.string.length % 2 !== 0)
+    {
+        return "String is not even";
+    }
+    else{
+        let len = string.length / 2;
+        return string.slice(0, len);
+    };
 }
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
-console.log(sortAlphabetically("JavaScript"))
+// console.log(sortAlphabetically("JavaScript"))
+console.log(extractFirstHalf('test'))
