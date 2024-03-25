@@ -38,5 +38,10 @@ let reverseString = (string) => {
     return reversed;
 }
 
+let sortAlphabetically = (string) => {
+    this.string = string
+    return string.split("").sort().join("")
+}
 // console.log(capitalizeFirst('testing to see if works'));
-console.log(reverseString('This Is Reversed'))
+// console.log(reverseString('This Is Reversed'))
+console.log(sortAlphabetically("JavaScript"))
