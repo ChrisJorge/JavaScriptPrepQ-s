@@ -1,4 +1,4 @@
-// Write a program to capitalize first letter of each word in a string
+
 let capitalizeFirst = (string) => {
     this.string = string ;
     let arr = string.split(" ");
@@ -27,7 +27,6 @@ let capitalizeFirst = (string) => {
     return returnstr;
 }
 
-//  Reverse a given string
 let reverseString = (string) => {
     this.string = string;
     let reversed = "";
@@ -93,17 +92,31 @@ let positive_negative = (num1, num2) => {
     this.num2 = num2;
     if(num1 % 2 === 0 && num2 % 2 !== 0)
     {
-        return true
+        return true;
     }
     else if(num1 % 2 !== 0 && num2 % 2 === 0)
     {
-        return true
+        return true;
+    };
+    return false;
+}
+
+let guess = (guess) => {
+    this.guess = guess;
+    let num = Math.floor(Math.random() * 10);
+
+    if(guess === num)
+    {
+        return `Your guess of ${guess} is the same as the computers random integer`;
     }
-    return false
+    else{
+        return `Your guess of ${guess} did not match the computers random integer of ${num}`;
+    };
 }
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
 // console.log(extractFirstHalf('test'))
 // console.log(closestOnehundred(-5, 33))
-console.log(positive_negative(1,4))
+// console.log(positive_negative(1,4))
+// console.log(guess(5))
