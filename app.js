@@ -115,6 +115,36 @@ let guess = (guess) => {
         return 'Not Matched';
     };
 }
+
+let numVowels = (str) => {
+    this.str = str;
+    let count = 0;
+    str = str.toUpperCase()
+    for (i = 0; i < str.length; i++)
+    {
+        switch (str[i])
+        {
+            case 'A':
+                count ++;
+                break;
+            case'E':
+                count++;
+                break;
+            case'I':
+                count++;
+                break;
+            case 'O':
+                count++
+                break;
+            case 'U':
+                count++;
+                break;
+            default:
+                break;
+        }
+    }
+    return count
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -122,3 +152,4 @@ let guess = (guess) => {
 // console.log(closestOnehundred(-5, 33))
 // console.log(positive_negative(1,4))
 // console.log(guess(5))
+console.log(numVowels('Apples'))
