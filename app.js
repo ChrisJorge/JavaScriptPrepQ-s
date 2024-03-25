@@ -177,12 +177,37 @@ let rightDirection = (str, amount) => {
 
     amount = amount % str.length;
     if(amount < 0){
-        amount = str.length + amount
+        amount = str.length + amount;
     }
 
-    return (str.slice(-amount) + str.slice(0, -amount))
+    return (str.slice(-amount) + str.slice(0, -amount));
 }
 
+let removeChar = (str, char) => {
+    this.str = str
+    this.char = char
+    let arr = [];
+    let returnstr = "";
+    if (char > str.length - 1)
+    {
+        return 'Invalid index'
+    }
+
+    for(i = 0; i < str.length; i++)
+    {
+        if(i === char)
+        {
+            continue
+        }
+        arr.push(str[i])
+    }
+    for(i = 0; i < arr.length; i++)
+    {
+        returnstr += arr[i]
+    }
+
+    return returnstr;
+}
 
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
@@ -195,4 +220,5 @@ let rightDirection = (str, amount) => {
 // console.log(return50(10,50))
 // console.log(sumOfTwo(2,2))
 // console.log(sumOfTwo(2,6))
-console.log(rightDirection('w3resource', 3))
+// console.log(rightDirection('w3resource', 3))
+// console.log(removeChar('Hello World', 0))
