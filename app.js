@@ -145,6 +145,21 @@ let numVowels = (str) => {
     }
     return count
 }
+
+let return50 = (num1 = 0, num2 = 0) => {
+    this.num1 = num1;
+    this.num2 = num2;
+
+    if(num1 === 50 || num2 === 50)
+    {
+        return true;
+    }
+    else if((num1 + num2) === 50)
+    {
+        return true;
+    }
+    return false;
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -152,4 +167,5 @@ let numVowels = (str) => {
 // console.log(closestOnehundred(-5, 33))
 // console.log(positive_negative(1,4))
 // console.log(guess(5))
-console.log(numVowels('Apples'))
+// console.log(numVowels('Apples'))
+console.log(return50(10,50))
