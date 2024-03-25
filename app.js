@@ -54,7 +54,41 @@ let extractFirstHalf = (string) => {
         return string.slice(0, len);
     };
 }
+
+let closestOnehundred = (num1, num2) =>
+{
+    this.num1 = num1;
+    this.num2 = num2;
+    let n1 = num1;
+    let n2 = num2
+
+   if(num1 >= 100)
+   {
+     n1 -= 100;
+   }
+   else{
+    n1 = 100 - num1
+   }
+   if(num2 >= 100)
+   {
+    n2 -= 100;
+   }
+   else{
+    n2 = 100 - num2
+   }
+
+   if(n1 < n2)
+   {
+    return num1
+   }
+   else{
+    return num2
+   }
+
+
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
-console.log(extractFirstHalf('test'))
+// console.log(extractFirstHalf('test'))
+// console.log(closestOnehundred(-5, 33))
