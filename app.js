@@ -29,6 +29,14 @@ let capitalizeFirst = (string) => {
 
 //  Reverse a given string
 let reverseString = (string) => {
-
+    this.string = string;
+    let reversed = "";
+    for (i = string.length - 1; i >= 0; i--)
+    {
+        reversed += string[i];
+    };
+    return reversed;
 }
-console.log(capitalizeFirst('testing to see if works'));
+
+// console.log(capitalizeFirst('testing to see if works'));
+console.log(reverseString('This Is Reversed'))
