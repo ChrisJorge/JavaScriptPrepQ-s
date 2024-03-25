@@ -87,8 +87,23 @@ let closestOnehundred = (num1, num2) =>
 
 
 }
+
+let positive_negative = (num1, num2) => {
+    this.num1 = num1;
+    this.num2 = num2;
+    if(num1 % 2 === 0 && num2 % 2 !== 0)
+    {
+        return true
+    }
+    else if(num1 % 2 !== 0 && num2 % 2 === 0)
+    {
+        return true
+    }
+    return false
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
 // console.log(extractFirstHalf('test'))
 // console.log(closestOnehundred(-5, 33))
+console.log(positive_negative(1,4))
