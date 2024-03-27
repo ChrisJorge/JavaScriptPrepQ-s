@@ -243,9 +243,14 @@ let rightDirection = (str = '', amount = 0) => {
     return (str.slice(-amount) + str.slice(0, -amount));
 }
 
-let removeChar = (str, char) => {
+let removeChar = (str = '', char = '') => {
     this.str = str
     this.char = char
+
+    if(typeof(str) !== 'string' || typeof(char) !== 'string')
+    {
+        return 'Invalid Input: Both parameters must be strings'
+    }
     let arr = [];
     let returnstr = "";
     if (char > str.length - 1)
@@ -513,5 +518,5 @@ let daysUntilChristmas = (date = "") => {
 // console.log(replaceCharacters('ab'))
 // console.log(replaceCharacters('All Letters will be replaced'))
 // console.log(sumDif15(10,5))
-console.log(middleArrays([1,2,3,5,6], [1,2,3,4]))
+// console.log(middleArrays([1,2,3,5,6], [1,2,3,4]))
 // console.log(daysUntilChristmas('03/11/2024'))
