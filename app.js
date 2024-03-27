@@ -56,8 +56,13 @@ let sortAlphabetically = (string = "") => {
     return string.split("").sort().join("");
 }
 
-let extractFirstHalf = (string) => {
+let extractFirstHalf = (string = "") => {
     this.string = string;
+
+    if(typeof(string) !== 'string')
+    {
+        return 'Invalid: Input is not a string'
+    }
     if(this.string.length % 2 !== 0)
     {
         return "String is not even";
