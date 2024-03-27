@@ -226,9 +226,14 @@ let sumOfTwo = (num1 = 0, num2 = 0) => {
     return (num1 + num2);
 }
 
-let rightDirection = (str, amount) => {
+let rightDirection = (str = '', amount = 0) => {
     this.str = str;
     this.amount = amount;
+
+    if(typeof(str) !== 'string' || typeof(amount) !== 'number')
+    {
+        return 'Invalid Input: First paramater must be string, second must be number'
+    }
 
     amount = amount % str.length;
     if(amount < 0){
