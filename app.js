@@ -382,6 +382,11 @@ let replaceCharacters = (str) => {
 let sumDif15 = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
+    
+    if(typeof(num1) !== 'number' || typeof(num2) !== 'number')
+    {
+        return 'Invalid input: Both inputs are not numbers'
+    }
 
     if(num1 === 15 || num2 === 15)
     {
