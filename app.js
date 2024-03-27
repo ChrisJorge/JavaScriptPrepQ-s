@@ -32,16 +32,21 @@ let capitalizeFirst = (string = "") => {
     return returnstr;
 }
 
-let reverseString = (string) => {
+let reverseString = (string = " ") => {
     this.string = string;
     let reversed = "";
+
+    if(typeof(string) !== 'string')
+    {
+        return 'Invalid: Input is not a string'
+    }
+
     for (i = string.length - 1; i >= 0; i--)
     {
         reversed += string[i];
     };
     return reversed;
 }
-
 let sortAlphabetically = (string) => {
     this.string = string;
     return string.split("").sort().join("");
