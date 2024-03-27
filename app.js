@@ -1,5 +1,4 @@
-
-let capitalizeFirst = (string) => {
+let capitalizeFirst = (string = "") => {
     this.string = string ;
     let arr = string.split(" ");
     let new_arr = [];
@@ -335,6 +334,11 @@ let middleArrays = (arr1 = [], arr2 = []) => {
     this.arr1 = arr1 
     this.arr2 = arr2
     
+    if(typeof(arr1) !== 'object' || typeof(arr2) !== 'object')
+    {
+        return 'Invalid both variables are not arrays'
+    }
+
     let returnarr = []
     let even1 = false 
     let even2 = false
@@ -349,18 +353,22 @@ let middleArrays = (arr1 = [], arr2 = []) => {
         even2 = true;
     }
 
-    if(even1)
-    {
-        for(i = (arr1.length / 2) - 1; i <= arr1.length / 2; i++)
+if(arr1.length > 0)
+{
+        if(even1)
         {
-            returnarr.push(arr1[i])
+            for(i = (arr1.length / 2) - 1; i <= arr1.length / 2; i++)
+            {
+                returnarr.push(arr1[i])
+            }
         }
-    }
-    else{
-        returnarr.push(arr1[Math.floor((arr1.length) / 2)])
-    }
-
+        else{
+            returnarr.push(arr1[Math.floor((arr1.length) / 2)])
+        }
+}
     
+if(arr2.length > 0)
+{
     if(even2)
     {
         for(i = (arr2.length / 2) - 1; i <= arr2.length / 2; i++)
@@ -371,7 +379,7 @@ let middleArrays = (arr1 = [], arr2 = []) => {
     else{
         returnarr.push(arr2[Math.floor((arr2.length) / 2)])
     }
-
+}
     return returnarr
 }
 
@@ -445,5 +453,5 @@ let daysUntilChristmas = (date = "") => {
 // console.log(replaceCharacters('ab'))
 // console.log(replaceCharacters('All Letters will be replaced'))
 // console.log(sumDif15(10,5))
-// console.log(middleArrays([1,2,3,5,6], [1,2,3,4]))
-console.log(daysUntilChristmas('03/11/2024'))
+console.log(middleArrays([1,2,3,5,6], [1,2,3,4]))
+// console.log(daysUntilChristmas('03/11/2024'))
