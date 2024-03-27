@@ -276,6 +276,11 @@ let removeChar = (str = '', char = '') => {
 
 let replaceCharacters = (str) => {
     this.str = str;
+
+    if(typeof(str) !== 'string')
+    {
+        return 'Invalid: Input must be a string'
+    }
     str = str.toLowerCase();
     let arr = [];
     let returnstr = "";
@@ -374,7 +379,7 @@ let replaceCharacters = (str) => {
     return returnstr
 }
 
-let sumDif15 = (num1, num2) => {
+let sumDif15 = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
 
