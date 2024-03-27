@@ -47,8 +47,12 @@ let reverseString = (string = " ") => {
     };
     return reversed;
 }
-let sortAlphabetically = (string) => {
+let sortAlphabetically = (string = "") => {
     this.string = string;
+    if(typeof(string) !== 'string')
+    {
+        return 'Invalid: Input is not a string'
+    }
     return string.split("").sort().join("");
 }
 
