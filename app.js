@@ -374,6 +374,61 @@ let middleArrays = (arr1 = [], arr2 = []) => {
 
     return returnarr
 }
+
+let daysUntilChristmas = (date = "") => {
+     this.date = date
+     let month = ""
+     let day = ""
+
+     let calendar = {
+        1: 31,
+        2: 28,
+        3: 31,
+        4: 30,
+        5: 31, 
+        6: 30,
+        7: 31,
+        8: 31,
+        9: 30,
+        10: 31,
+        11: 30,
+        12: 31
+     }
+     let dayspassed = 0
+     if(date.length === 5 || date.length === 10)
+     {
+        for(let i = 1; i < 2; i++)
+        {
+            console.log(date[i])
+            month += date[i]
+        }
+        
+        for(let i = 3; i < 5; i++ )
+        {
+            day += date[i]
+        }
+
+        if(calendar[Number(month)] < Number(day)){
+            return `Invalid days for the month`
+        }
+
+        for(let i = 1; i < Number(month); i++)
+        {
+            dayspassed += calendar[i]
+        }
+
+        
+        dayspassed += Number(day)
+        calendar[Number(month)] = ((calendar[Number(month)]) - Number(day))
+
+        
+     }
+     else{
+        return 'Invalid Format have date as mm-dd-yyyy or mm-dd'
+     }
+     
+     return(`${365 - dayspassed} days until Christmas`)
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -390,4 +445,5 @@ let middleArrays = (arr1 = [], arr2 = []) => {
 // console.log(replaceCharacters('ab'))
 // console.log(replaceCharacters('All Letters will be replaced'))
 // console.log(sumDif15(10,5))
-console.log(middleArrays([1,2,3,5,6], [1,2,3]))
+// console.log(middleArrays([1,2,3,5,6], [1,2,3,4]))
+console.log(daysUntilChristmas('03/11/2024'))
