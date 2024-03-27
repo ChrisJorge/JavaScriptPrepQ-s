@@ -127,6 +127,14 @@ let positive_negative = (num1, num2) => {
 
 let guess = (guess) => {
     this.guess = guess;
+
+    if(typeof(guess) !== 'number')
+    {
+        return 'Invalid Guess: Guess must be a number'
+    }
+    else if (guess < 0 || guess > 10){
+        return 'Invalid Guess: Guess must be between 0-10'
+    }
     let num = Math.floor(Math.random() * 10);
 
     if(guess === num)
