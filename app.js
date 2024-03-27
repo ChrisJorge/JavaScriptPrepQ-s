@@ -148,8 +148,14 @@ let guess = (guess) => {
     };
 }
 
-let numVowels = (str) => {
+let numVowels = (str = '') => {
     this.str = str;
+
+    if(typeof(str) !== 'string')
+    {
+        return 'Invalid: Input is not a string'
+    }
+
     let count = 0;
     str = str.toUpperCase()
     for (i = 0; i < str.length; i++)
