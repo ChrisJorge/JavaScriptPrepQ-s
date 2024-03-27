@@ -73,10 +73,15 @@ let extractFirstHalf = (string = "") => {
     };
 }
 
-let closestOnehundred = (num1, num2) =>
+let closestOnehundred = (num1 = 0, num2 = 0) =>
 {
     this.num1 = num1;
     this.num2 = num2;
+
+    if(typeof(num1) !== 'number' || typeof(num2) !== 'number')
+    {
+        return 'Invalid input: Both inputs are not numbers'
+    }
     let n1 = num1;
     let n2 = num2
 
