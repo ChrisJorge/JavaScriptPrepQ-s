@@ -119,7 +119,7 @@ let positive_negative = (num1, num2) => {
     {
         return 'Invalid input: Both inputs are not numbers'
     }
-    
+
     if(num1 % 2 === 0 && num2 % 2 !== 0)
     {
         return true;
@@ -194,6 +194,10 @@ let return50 = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
 
+    if(typeof(num1) !== 'number' || typeof(num2) !== 'number')
+    {
+        return 'Invalid input: Both inputs are not numbers'
+    }
 
     if(num1 === 50 || num2 === 50)
     {
