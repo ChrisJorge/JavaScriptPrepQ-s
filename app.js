@@ -382,7 +382,7 @@ let replaceCharacters = (str) => {
 let sumDif15 = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
-    
+
     if(typeof(num1) !== 'number' || typeof(num2) !== 'number')
     {
         return 'Invalid input: Both inputs are not numbers'
@@ -460,6 +460,11 @@ if(arr2.length > 0)
 
 let daysUntilChristmas = (date = "") => {
      this.date = date
+
+     if(typeof(date) !== 'string')
+     {
+        return 'Invalid: Input must be a string'
+     }
      let month = ""
      let day = ""
 
