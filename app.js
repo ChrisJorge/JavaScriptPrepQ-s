@@ -1,5 +1,11 @@
 let capitalizeFirst = (string = "") => {
     this.string = string ;
+
+    if(typeof(string) !== 'string')
+    {
+        return 'Invalid: Input is not a string'
+    }
+
     let arr = string.split(" ");
     let new_arr = [];
     for (let i = 0; i < arr.length; i++)
