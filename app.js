@@ -330,6 +330,50 @@ let sumDif15 = (num1, num2) => {
         return false;
     }
 }
+
+let middleArrays = (arr1 = [], arr2 = []) => {
+    this.arr1 = arr1 
+    this.arr2 = arr2
+    
+    let returnarr = []
+    let even1 = false 
+    let even2 = false
+
+    if (arr1.length % 2 === 0)
+    {
+        even1 = true
+    }
+
+    if (arr2.length % 2 === 0)
+    {
+        even2 = true;
+    }
+
+    if(even1)
+    {
+        for(i = (arr1.length / 2) - 1; i <= arr1.length / 2; i++)
+        {
+            returnarr.push(arr1[i])
+        }
+    }
+    else{
+        returnarr.push(arr1[Math.floor((arr1.length) / 2)])
+    }
+
+    
+    if(even2)
+    {
+        for(i = (arr2.length / 2) - 1; i <= arr2.length / 2; i++)
+        {
+            returnarr.push(arr2[i])
+        }
+    }
+    else{
+        returnarr.push(arr2[Math.floor((arr2.length) / 2)])
+    }
+
+    return returnarr
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -345,4 +389,5 @@ let sumDif15 = (num1, num2) => {
 // console.log(removeChar('Hello World', 0))
 // console.log(replaceCharacters('ab'))
 // console.log(replaceCharacters('All Letters will be replaced'))
-console.log(sumDif15(10,5))
+// console.log(sumDif15(10,5))
+console.log(middleArrays([1,2,3,5,6], [1,2,3]))
