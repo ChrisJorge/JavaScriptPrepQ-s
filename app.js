@@ -309,6 +309,27 @@ let replaceCharacters = (str) => {
     }
     return returnstr
 }
+
+let sumDif15 = (num1, num2) => {
+    this.num1 = num1;
+    this.num2 = num2;
+
+    if(num1 === 15 || num2 === 15)
+    {
+        return true
+    }
+    else if ((num1 + num2) === 15)
+    {
+        return true
+    }
+    else if ((num1 - num2) === 15)
+    {
+        return true
+    }
+    else {
+        return false;
+    }
+}
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
@@ -324,3 +345,4 @@ let replaceCharacters = (str) => {
 // console.log(removeChar('Hello World', 0))
 // console.log(replaceCharacters('ab'))
 // console.log(replaceCharacters('All Letters will be replaced'))
+console.log(sumDif15(10,5))
