@@ -562,8 +562,41 @@ let splitstr = (word = '') => {
 
     return returnArr
 }
-console.log(mergeArr([1,2,3], [4,5]))
-console.log(splitstr('testing to see if working'))
+
+let freqOfChars = (str) =>{
+    this.str = str;
+    let result = []
+    let occured = []
+    let count = []
+    function Obj (letter, frequency){
+        this.letter = letter;
+        this.frequency = frequency
+    }
+
+    for(let i = 0; i < str.length; i++)
+    {
+        if(!occured.includes(str[i]))
+        {
+            occured.push(str[i])
+            count.push(1)
+        }
+        else{
+            let y = occured.indexOf(str[i])
+            count[y] = count[y] + 1
+        }
+    }
+    
+    for(i = 0; i < occured.length; i++)
+    {
+        result.push(new Obj(occured[i], count[i]))
+    }
+
+    return result
+
+}
+console.log(freqOfChars('This is a string of text'))
+// console.log(mergeArr([1,2,3], [4,5]))
+// console.log(splitstr('testing to see if working'))
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
