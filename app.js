@@ -1,4 +1,4 @@
-let capitalizeFirst = (string = "") => {
+const capitalizeFirst = (string = "") => {
     this.string = string ;
 
     if(typeof(string) !== 'string')
@@ -32,7 +32,7 @@ let capitalizeFirst = (string = "") => {
     return returnstr;
 }
 
-let reverseString = (string = " ") => {
+const reverseString = (string = " ") => {
     this.string = string;
     let reversed = "";
 
@@ -48,7 +48,7 @@ let reverseString = (string = " ") => {
     return reversed;
 }
 
-let sortAlphabetically = (string = "") => {
+const sortAlphabetically = (string = "") => {
     this.string = string;
     if(typeof(string) !== 'string')
     {
@@ -57,7 +57,7 @@ let sortAlphabetically = (string = "") => {
     return string.split("").sort().join("");
 }
 
-let extractFirstHalf = (string = "") => {
+const extractFirstHalf = (string = "") => {
     this.string = string;
 
     if(typeof(string) !== 'string')
@@ -74,7 +74,7 @@ let extractFirstHalf = (string = "") => {
     };
 }
 
-let closestOnehundred = (num1 = 0, num2 = 0) =>
+const closestOnehundred = (num1 = 0, num2 = 0) =>
 {
     this.num1 = num1;
     this.num2 = num2;
@@ -112,7 +112,7 @@ let closestOnehundred = (num1 = 0, num2 = 0) =>
 
 }
 
-let positive_negative = (num1 = 0, num2 = 0) => {
+const positive_negative = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
 
@@ -132,7 +132,7 @@ let positive_negative = (num1 = 0, num2 = 0) => {
     return false;
 }
 
-let guess = (guess) => {
+const guess = (guess) => {
     this.guess = guess;
 
     if(typeof(guess) !== 'number')
@@ -155,7 +155,7 @@ let guess = (guess) => {
     };
 }
 
-let numVowels = (str = '') => {
+const numVowels = (str = '') => {
     this.str = str;
 
     if(typeof(str) !== 'string')
@@ -191,7 +191,7 @@ let numVowels = (str = '') => {
     return count
 }
 
-let return50 = (num1 = 0, num2 = 0) => {
+const return50 = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
 
@@ -211,7 +211,7 @@ let return50 = (num1 = 0, num2 = 0) => {
     return false;
 }
 
-let sumOfTwo = (num1 = 0, num2 = 0) => {
+const sumOfTwo = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
 
@@ -227,7 +227,7 @@ let sumOfTwo = (num1 = 0, num2 = 0) => {
     return (num1 + num2);
 }
 
-let rightDirection = (str = '', amount = 0) => {
+const rightDirection = (str = '', amount = 0) => {
     this.str = str;
     this.amount = amount;
 
@@ -244,7 +244,7 @@ let rightDirection = (str = '', amount = 0) => {
     return (str.slice(-amount) + str.slice(0, -amount));
 }
 
-let removeChar = (str = '', char = '') => {
+const removeChar = (str = '', char = '') => {
     this.str = str
     this.char = char
 
@@ -275,7 +275,7 @@ let removeChar = (str = '', char = '') => {
     return returnstr;
 }
 
-let replaceCharacters = (str) => {
+const replaceCharacters = (str) => {
     this.str = str;
 
     if(typeof(str) !== 'string')
@@ -380,7 +380,7 @@ let replaceCharacters = (str) => {
     return returnstr
 }
 
-let sumDif15 = (num1 = 0, num2 = 0) => {
+const sumDif15 = (num1 = 0, num2 = 0) => {
     this.num1 = num1;
     this.num2 = num2;
 
@@ -406,7 +406,7 @@ let sumDif15 = (num1 = 0, num2 = 0) => {
     }
 }
 
-let middleArrays = (arr1 = [], arr2 = []) => {
+const middleArrays = (arr1 = [], arr2 = []) => {
     this.arr1 = arr1 
     this.arr2 = arr2
     
@@ -459,7 +459,7 @@ if(arr2.length > 0)
     return returnarr
 }
 
-let daysUntilChristmas = (date = "") => {
+const daysUntilChristmas = (date = "") => {
      this.date = date
 
      if(typeof(date) !== 'string')
@@ -519,7 +519,7 @@ let daysUntilChristmas = (date = "") => {
      return(`${365 - dayspassed} days until Christmas`)
 }
 
-let mergeArr = (arr1 = [], arr2 = []) => {
+const mergeArr = (arr1 = [], arr2 = []) => {
     this.arr1 = arr1;
     this.arr2 = arr2;
     let returnArr = []
@@ -551,7 +551,7 @@ let mergeArr = (arr1 = [], arr2 = []) => {
 
 }
 
-let splitstr = (word = '') => {
+const splitstr = (word = '') => {
     this.word = word
     let returnArr = []
     
@@ -563,8 +563,9 @@ let splitstr = (word = '') => {
     return returnArr
 }
 
-let freqOfChars = (str) =>{
+const freqOfChars = (str) =>{
     this.str = str;
+    str = str.toLowerCase()
     let result = []
     let occured = []
     let count = []
