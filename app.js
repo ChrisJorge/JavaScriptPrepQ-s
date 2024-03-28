@@ -47,6 +47,7 @@ let reverseString = (string = " ") => {
     };
     return reversed;
 }
+
 let sortAlphabetically = (string = "") => {
     this.string = string;
     if(typeof(string) !== 'string')
@@ -517,6 +518,40 @@ let daysUntilChristmas = (date = "") => {
      
      return(`${365 - dayspassed} days until Christmas`)
 }
+
+let mergeArr = (arr1 = [], arr2 = []) => {
+    this.arr1 = arr1;
+    this.arr2 = arr2;
+    let returnArr = []
+    let index = 0
+
+    for(i = 0; i < arr1.length && i < arr2.length; i++)
+    {
+        returnArr.push(arr1[i])
+        returnArr.push(arr2[i])
+        index += 1
+    }
+
+    if(arr1.length > arr2.length)
+    {
+        for(i = index; i < arr1.length; i++)
+        {
+            returnArr.push(arr1[i])
+        }
+    }
+    else if(arr2.length > arr1.length)
+    {
+        for(i = index; i < arr2.length; i++)
+        {
+            returnArr.push(arr2[i])
+        }
+    }
+
+    return returnArr
+
+}
+
+console.log(mergeArr([1,2,3], [4,5]))
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
