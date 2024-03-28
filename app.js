@@ -551,7 +551,19 @@ let mergeArr = (arr1 = [], arr2 = []) => {
 
 }
 
+let splitstr = (word = '') => {
+    this.word = word
+    let returnArr = []
+    
+    for(i = 0; i < word.length; i++)
+    {
+        returnArr.push(word[i])
+    }
+
+    return returnArr
+}
 console.log(mergeArr([1,2,3], [4,5]))
+console.log(splitstr('testing to see if working'))
 // console.log(capitalizeFirst('testing to see if works'));
 // console.log(reverseString('This Is Reversed'))
 // console.log(sortAlphabetically("JavaScript"))
