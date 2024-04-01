@@ -595,7 +595,29 @@ const freqOfChars = (str) =>{
     return result
 
 }
-console.log(freqOfChars('This is a string of text'))
+
+const createPhoneNumber = (arr = []) => {
+    this.arr = arr;
+    let str = '(xxx) xxx-xxxx'
+    let returnstr = ''
+    y = 0;
+    while (y < arr.length){
+        for(i = 0; i < str.length; i++)
+        {
+            if(str[i] === 'x')
+            {
+                returnstr += arr[y]
+                y ++
+            }
+            else{
+                returnstr += str[i]
+            }
+        }
+    }
+   return(returnstr)
+}
+console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
+// console.log(freqOfChars('This is a string of text'))
 // console.log(mergeArr([1,2,3], [4,5]))
 // console.log(splitstr('testing to see if working'))
 // console.log(capitalizeFirst('testing to see if works'));
