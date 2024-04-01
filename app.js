@@ -715,7 +715,40 @@ const alphabetPosition = (str = '') => {
     }
     return returnstr
 }
-console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+
+const toCamelCase = (str = '') => {
+    this.str = str;
+
+    if(typeof(str) !== 'string')
+    {
+        return 'Invalid: Input must be a string'
+    }
+    str = str.toLowerCase();
+    let returnstr = "";
+
+    for(i = 0; i < str.length; i++){
+        if(str[i] === '-' || str[i] === '_')
+        {
+            if(i + 1 !== str.length)
+            {
+                returnstr += str[i + 1].toUpperCase()
+                i += 1
+            }
+            else{
+                continue
+            }
+        }
+        else{
+            returnstr += str[i]
+        }
+    }
+    return returnstr
+}
+console.log(toCamelCase("the-stealth-warrior"))
+console.log(toCamelCase("The_Stealth_Warrior"))
+console.log(toCamelCase("The_Stealth-Warrior"))
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
 // console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
 // console.log(freqOfChars('This is a string of text'))
 // console.log(mergeArr([1,2,3], [4,5]))
