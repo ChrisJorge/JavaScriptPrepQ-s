@@ -616,7 +616,107 @@ const createPhoneNumber = (arr = []) => {
     }
    return(returnstr)
 }
-console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
+
+const alphabetPosition = (str = '') => {
+    this.str = str;
+
+    if(typeof(str) !== 'string')
+    {
+        return 'Invalid: Input must be a string'
+    }
+    str = str.toLowerCase();
+    let returnstr = "";
+
+    for(i = 0; i < str.length; i++)
+    {
+        switch (str[i])
+        {
+            case 'a':
+                returnstr += ' 1'
+                break;
+            case 'b':
+                returnstr += ' 2'
+                break;
+            case 'c':
+                returnstr += ' 3'
+                break;
+            case 'd':
+                returnstr += ' 4'
+                break;
+            case 'e':
+                returnstr += ' 5'
+                break;
+            case 'f':
+                returnstr += ' 6'
+                break;
+            case 'g':
+                returnstr += ' 7'
+                break;
+            case 'h':
+                returnstr += ' 8'
+                break;
+            case 'i':
+                returnstr += ' 9'
+                break;
+            case 'j':
+                returnstr += ' 10'
+                break;
+            case 'k':
+                returnstr += ' 11'
+                break;
+            case 'l':
+                returnstr += ' 12'
+                break;
+            case 'm':
+                returnstr += ' 13'
+                break;
+            case 'n':
+                returnstr += ' 14'
+                break;
+            case 'o':
+                returnstr += ' 15'
+                break;
+            case 'p':
+                returnstr += ' 16'
+                break;
+            case 'q':
+                returnstr += ' 17'
+                break;
+            case 'r':
+                returnstr += ' 18'
+                break;
+            case 's':
+                returnstr += ' 19'
+                break;
+            case 't':
+                returnstr += ' 20'
+                break;
+            case 'u':
+                returnstr += ' 21'
+                break;
+            case 'v':
+                returnstr += ' 22'
+                break;
+            case 'w':
+                returnstr += ' 23'
+                break;
+            case 'x':
+                returnstr += ' 24'
+                break;
+            case 'y':
+                returnstr += ' 25'
+                break;
+            case 'z':
+                returnstr += ' 26'
+                break;
+            default:
+                break;
+        }
+    }
+    return returnstr
+}
+console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+// console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
 // console.log(freqOfChars('This is a string of text'))
 // console.log(mergeArr([1,2,3], [4,5]))
 // console.log(splitstr('testing to see if working'))
